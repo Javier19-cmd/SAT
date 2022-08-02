@@ -32,14 +32,6 @@ def dpll(cnf, assignments={}):
  
     return False, None
 
-#Pasando expresiones.
-cnf = [{(1, True), (2, True), (3, True)},
-         {(1, False), (2, True)},
-            {(1, False), (3, True)},
-                {(2, False), (3, True)},
-                    {(1, True), (2, False)},
-                        {(1, True), (3, False)},
-                            {(2, True), (3, False)},
-                                {(1, False), (2, False), (3, False)}]
+cnf = [{("f", True), ("p", True), ("q", True)}]
 
 print(dpll(cnf))
