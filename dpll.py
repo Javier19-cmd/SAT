@@ -13,7 +13,7 @@ def dpll(cnf, assignments={}):
     if len(cnf) == 0:
         return True, assignments
  
-    if any([len(c)==0 for c in cnf]):
+    if any([len(c)== 0 for c in cnf]):
         return False, None
  
     l = __select_literal(cnf)
@@ -32,6 +32,6 @@ def dpll(cnf, assignments={}):
  
     return False, None
 
-cnf = [{("f", True), ("p", True), ("q", True)}]
+cnf = [{("f", False), ("p", False), ("q", False)}]
 
 print(dpll(cnf))
