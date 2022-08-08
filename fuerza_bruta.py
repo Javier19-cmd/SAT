@@ -16,7 +16,7 @@ def fuerza_bruta(cnf):
     for seq in itertools.product([True,False], repeat=n): # Generamos todas las posibles combinaciones de literales.
         a = set(zip(literales, seq)) # Se crea un conjunto con las literales y sus valores.
         if all([bool(disj.intersection(a)) for disj in cnf]): # Se comprueba si la combinación de literales es satisfactoria.
-            return True # Si lo es, se devuelve True.
+            return True, a # Si lo es, se devuelve True.
  
     return False # Si no se ha encontrado ninguna combinación satisfactoria, se devuelve False.
 
