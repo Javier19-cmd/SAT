@@ -1,43 +1,30 @@
-import itertools
+# cnf = [{("f", False), ("p", False), ("q", False)}] 
 
-# lista = [True,False]
+# if len(cnf) == 0:
+# 	print("True")
 
-# for i in list(itertools.product(lista, repeat=3)):
-# 	print(i)
+# if not cnf:
+# 	print('True')
 
-# somelists = [
-#    [1, 2, 3],
-#    ['a', 'b'],
-#    [4, 5]
-# ]
+# for c in cnf:
+#         for literal in c:
+#             print(literal[0])
 
-# cart_prod = [(a,b,c) for a in somelists[0] for b in somelists[1] for c in somelists[2]]
+def sumar(*argumentos):
+	print(argumentos,'hola')
+	return sum(argumentos)
 
-# print(cart_prod)
+def suma(nu1, nu2, nu3):
+	return nu1 + nu2 + nu3
 
+def imprimirUsuario(**usuario):
+	print(usuario)
+	return True
+	
 
-# matrix = [[j for j in range(3)] for i in range(3)]
+# print(suma(3,4,5))
+sumar(3,4,5)
 
-names = ['Mukesh', 'Roni', 'Chari','hola']
-ages = [24, 50, 18,112]
- 
-for i, (name, age) in enumerate(zip(names, ages)):
-    print(i, name, age)
+# print(sumar(1,2,3,4,5,8,9,0,9))
 
-for i in range(len(names)):
-	print(i, names[i], ages[i])
-
-prueba = set([(names[i],ages[i]) for i in range(len(names))])
-for i in prueba:
-	print(i)
-
-
-
-
-
-# stocks = ['reliance', 'infosys', 'tcs','lsd']
-# prices = [2175, 1127, 2750,112]
- 
-# new_dict = {stocks: prices for stocks,
-#             prices in zip(stocks, prices)}
-# print(new_dict)
+print(imprimirUsuario(nombre = "Juan", apellido = "Perez"))

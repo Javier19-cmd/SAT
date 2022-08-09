@@ -20,7 +20,13 @@ def dpll(cnf, assignments={}): #Algoritmo DPLL
     
     #Se obtiene el valor de verdad del literal.
     new_cnf = [c for c in cnf if (l, True) not in c]
+
+    # print(new_cnf)
+
     new_cnf = [c.difference({(l, False)}) for c in new_cnf]
+
+    # print(new_cnf)
+
     sat, vals = dpll(new_cnf, {**assignments, **{l: True}})
     if sat: #Si el valor de verdad es True, se retorna True.
         return sat, vals
