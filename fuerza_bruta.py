@@ -1,6 +1,3 @@
-"""
-1. Algoritmo de fuerza bruta: https://davefernig.com/2018/05/07/solving-sat-in-python/
-"""
 import itertools
 
 def fuerza_bruta(cnf):
